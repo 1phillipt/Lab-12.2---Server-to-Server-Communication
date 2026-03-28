@@ -16,7 +16,7 @@ app.get("/", (req, res)=>{
 })
 
 
-app.get("/api/fun-facts", async (req, res)=>{
+app.get("/api/fun-fact", async (req, res)=>{
   try{
     const response = await axios.get("https://uselessfacts.jsph.pl/api/v2/facts/random");
   res.json({ fact: response.data.text });
